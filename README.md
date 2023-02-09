@@ -1,3 +1,15 @@
+
+
+# m68asm_clown
+Kuma's customization on clownassember
+
+I would like to have a version of casual usage, 10 or less than 20 lines of m68000
+assembler source code to be assembled, and mainly see its binary data.
+
+The original versions seems good for me, mainly its using yacc/lex.
+
+The following is the original README.md by Crownery
+
 # clownassembler
 
 ## Introduction
