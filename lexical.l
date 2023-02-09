@@ -29,6 +29,8 @@
 
 #include "syntactic.h"
 
+#define M68KASM_error -1
+
 void m68kasm_error(void *scanner, Statement *statement, const char *message);
 
 %}

@@ -32,6 +32,7 @@
 #include "clowncommon.h"
 
 #define YYSTYPE M68KASM_STYPE
+#define YYNOMEM return(2)
 
 #define CREATE_LIST_TYPE(TYPE)\
 typedef struct TYPE\
