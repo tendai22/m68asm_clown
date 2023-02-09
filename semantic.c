@@ -4121,6 +4121,22 @@ static void ProcessStatement(SemanticState *state, Statement *statement, const c
 			break;
 		}
 
+		case STATEMENT_TYPE_ORG:
+		{
+			unsigned long value;
+/*
+			if (state->equ_set_descope_local_labels)
+				SetLastGlobalLabel(state, label);
+*/
+
+			if (ResolveExpression(state, &statement->shared.expression, &value, cc_true)) {
+				state->program_counter = value;
+				fprintf(stderr, "org: %08lX\n", value);
+				fseek(state->output_file, value, SEEK_SET);
+			}
+			break;
+		}
+
 		case STATEMENT_TYPE_SET:
 		{
 			unsigned long value;

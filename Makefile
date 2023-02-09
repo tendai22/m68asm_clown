@@ -8,7 +8,7 @@ else
  YFLAGS = --debug
 endif
 
-all: generators
+all: generators assemblers
 
 generators: lexical.c lexical.h syntactic.c syntactic.h
 
